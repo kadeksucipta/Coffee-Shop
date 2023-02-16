@@ -1,0 +1,17 @@
+.header-alamat {
+    background: radial-gradient(circle at top right, #f39a26, #a56e06);
+    color: white;
+}
+.table-alamat {
+    max-width: 100%;
+}
+.btn-tambah-alamat {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+}
+.btn-tambah-alamat:hover {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+}

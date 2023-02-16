@@ -1,0 +1,19 @@
+.header-checkout {
+    background: radial-gradient(circle at top right, #f39a26, #a56e06);
+    color: white;
+}
+.btn-checkout {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+    width: 100%;
+}
+.btn-checkout:hover {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+    width: 100%;
+}
+.mr-detail {
+    margin-left: 20px;
+}

@@ -1,0 +1,28 @@
+.btn-confirmkembali {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+    width: 100%;
+    float: left;
+}
+.btn-confirmkembali:hover {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+    width: 100%;
+    float: left;
+}
+.btn-confirmbayar {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+    width: 100%;
+    float: right;
+}
+.btn-confirmbayar:hover {
+    background-color: white;
+    border: 1px solid #a56e06;
+    color: #a56e06;
+    width: 100%;
+    float: right;
+}

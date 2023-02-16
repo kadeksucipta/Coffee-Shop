@@ -1,0 +1,18 @@
+.nav-portal {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.header-profile {
+    background: radial-gradient(circle at top right, #f39a26, #a56e06);
+    color: white;
+}
+.card-profile {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.footer-profile {
+    background: radial-gradient(circle at top right, #f39a26, #a56e06);
+    color: white;
+    height: 50px;
+    text-align: center;
+}

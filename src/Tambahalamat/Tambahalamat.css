@@ -1,0 +1,22 @@
+.column-form {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    column-count: 1;
+}
+.nav-portal {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.btn-loker {
+    background: radial-gradient(circle at top right, #EF5DAB, #A5A6F6);
+}
+.form-alamat {
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 5px;
+}
+.header-tambah {
+    background: radial-gradient(circle at top right, #f39a26, #a56e06);
+    color: white;
+}

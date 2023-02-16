@@ -1,0 +1,29 @@
+.nav-portal {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.box-gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #a56e06;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.card-gallery {
+    width: 15rem;
+    border: none;
+    max-width: 100%;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 3;
+}
+.tag-menu {
+    background: white;
+    color: #a56e06;
+    border: 1px solid #a56e06;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}

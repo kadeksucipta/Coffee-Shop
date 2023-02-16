@@ -1,0 +1,22 @@
+.header-logout {
+    background: radial-gradient(circle at top right, #f39a26, #a56e06);
+    color: white;
+}
+.btn-logout-ya {
+    background-color: #a56e06;
+    color: white;
+    border: none;
+}
+.btn-logout-ya:hover {
+    background-color: #a56e06;
+}
+.btn-logout-tidak {
+    background-color: white;
+    color: #a56e06;
+    border: 1px solid #a56e06;
+}
+.btn-logout-tidak:hover {
+    background-color: white;
+    color: #a56e06;
+    border: 1px solid #a56e06;
+}
