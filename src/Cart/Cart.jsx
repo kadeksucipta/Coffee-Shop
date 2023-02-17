@@ -234,7 +234,7 @@ const Cart = () => {
                 Sub Total : Rp.{numberWithCommas(totalCartPrice)}.00
               </strong>
             </h5>
-            <Table className="table-alamat" striped bordered hover>
+            <Table responsive className="table-alamat" striped bordered hover>
               <thead style={{ maxWidth: "100%" }}>
                 <tr style={{ maxWidth: "100%" }}>
                   <th>Gambar</th>

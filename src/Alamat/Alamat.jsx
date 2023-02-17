@@ -171,7 +171,7 @@ const Alamat = () => {
           <hr style={{ width: "10%" }} />
           <ListGroup style={{ width: "100%" }} variant="flush">
               <div style={{maxWidth: "100%"}}>
-              <Table className="table-alamat" striped bordered hover>
+              <Table responsive className="table-alamat" striped bordered hover>
               <thead style={{maxWidth: "100%"}}>
                 <tr style={{maxWidth: "100%"}}>
                   <th>Alamat</th>

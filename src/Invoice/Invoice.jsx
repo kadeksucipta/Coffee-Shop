@@ -184,12 +184,12 @@ const Invoice = () => {
       {/*---------------------------------------------------------*/}
 
       <Container>
-        <Card>
+        <Card className="mt-5">
           <Card.Header style={{ color: "white" }} className="header-checkout">
             Invoice
           </Card.Header>
           <Card.Body>
-          <Table style={{ maxWidth: "100%" }} className="table-alamat" striped bordered hover>
+          <Table responsive style={{ maxWidth: "100%" }} className="table-alamat" striped bordered hover>
               <thead style={{ maxWidth: "100%" }}>
                 <tr style={{ maxWidth: "100%" }}>
                   <th>Time Order</th>

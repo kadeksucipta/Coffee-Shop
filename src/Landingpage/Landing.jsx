@@ -92,8 +92,9 @@ const Landing = () => {
         <div className="box2-landing">
           <br />
           <h4 style={{ color: "black", fontSize: "20px", textAlign: "center" }}>
-            Menu Utama
+            <strong>Menu Utama</strong>
           </h4>
+          
           <div className="d-flex" style={{justifyContent: "center", alignItems: "center"}}>
           {landing.map((item, index) => (
             <Card className="card-landing" key={index} style={{width: "15rem", height: "15rem", borderRadius: "10px 10px 100px 100px", border: "none"}}>
