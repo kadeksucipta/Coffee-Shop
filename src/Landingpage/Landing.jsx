@@ -50,7 +50,7 @@ const Landing = () => {
       <div className="box-bg">
       <Navbar variant="dark" className="nav-portal" expand="lg">
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand>
             <strong>Otak</strong>Business
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

@@ -64,7 +64,7 @@ const Logout = () => {
     <React.Fragment>
       <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand>
             <img
               alt=""
               src={otak}
