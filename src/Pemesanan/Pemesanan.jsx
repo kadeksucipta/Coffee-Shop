@@ -185,7 +185,7 @@ const Pemesanan = () => {
                   <th>Invoice</th>
                 </tr>
               </thead>
-              {order.map((item, index) => (
+              {order?.map((item, index) => (
               <tbody key={index} style={{maxWidth: "100%"}}>
                 <tr style={{maxWidth: "100%"}}>
                   <td>{item._id}</td>

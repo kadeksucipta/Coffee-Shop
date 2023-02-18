@@ -46,6 +46,7 @@ const Logout = () => {
   }, []);
 
   const fetchProfile = (formData) => {
+    const token = localStorage.getItem("token");
     fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
