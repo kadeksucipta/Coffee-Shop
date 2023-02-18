@@ -255,7 +255,7 @@ const Cart = () => {
                           maxWidth: "100%"
                         }}
                         variant="top"
-                        src={"http://localhost:8000/images/products" + item.image_url}
+                        src={"http://localhost:8000/images/" + item.image_url}
                       />
                     </td>
                     <td>{item.name}</td>
