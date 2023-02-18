@@ -63,7 +63,7 @@ const Cart = () => {
     console.log("cart: ", cart);
     console.log("itemscart :", items);
 
-    fetch(`http://localhost:8000/api/carts`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       method: "PUT",
       body: JSON.stringify({
         user: JSON.parse(userData),
@@ -104,7 +104,7 @@ const Cart = () => {
     console.log("oldcart :", oldCart);
     console.log("cart: ", cart);
 
-    fetch(`http://localhost:8000/api/carts`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       method: "PUT",
       body: JSON.stringify({
         user: JSON.parse(userData),
@@ -129,7 +129,7 @@ const Cart = () => {
   const fetchCart = () => {
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:8000/api/carts`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

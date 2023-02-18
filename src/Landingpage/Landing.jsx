@@ -37,7 +37,7 @@ const Landing = () => {
   }, []);
 
   const fetchLanding = () => {
-    fetch(`http://localhost:8000/api/landing`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/landing`)
       .then((res) => res.json())
       .then((data) => {
         setLanding(data.data);

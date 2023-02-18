@@ -46,11 +46,11 @@ const Logout = () => {
   }, []);
 
   const fetchProfile = (formData) => {
-    fetch(`http://localhost:8000/auth/me`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzkyZmYyZGQ3NWY1ZDc1NmU3MjFiZmYiLCJmdWxsX25hbWUiOiJLYWRlayBTdWNpcHRhIiwiZW1haWwiOiJrYWRla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcl9pZCI6OSwiaWF0IjoxNjcwOTk0NzkyfQ.SR3QSv5msez833UDgbOdnWwIQWhtonKyBDC38Iun0Jo`,
+        Authorization: `Bearer ${token}`,
       },
     })
       .then((res) => res.json())

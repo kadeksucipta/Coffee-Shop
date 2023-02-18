@@ -43,7 +43,7 @@ const Confirm = () => {
 
   const goToInvoice = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/orders`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/orders`, {
       method: "POST", 
       body: JSON.stringify({
         delivery_fee: 10000,
@@ -66,7 +66,7 @@ const Confirm = () => {
 
   const submitAddress = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/delivery-addresses`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

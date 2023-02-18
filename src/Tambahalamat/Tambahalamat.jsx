@@ -45,7 +45,7 @@ const Tambahalamat = () => {
   
   const submitAddress = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/delivery-addresses`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "POST",
         body: JSON.stringify(payload),
 

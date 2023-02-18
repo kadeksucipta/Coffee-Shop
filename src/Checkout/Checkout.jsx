@@ -51,7 +51,7 @@ const Checkout = () => {
 
   const submitAddress = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/delivery-addresses`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const Checkout = () => {
 
   const fetchProfile = (formData) => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/auth/me`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
       headers: {
@@ -84,7 +84,7 @@ const Checkout = () => {
 
   const fetchCart = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/carts`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -60,7 +60,7 @@ const Pemesanan = () => {
 
   const fetchOrder = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/orders`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/orders`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

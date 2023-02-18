@@ -36,7 +36,7 @@ const Register = () => {
   const [select, setSelect] = useState([]);
 
   const fetchLogin = (formData) => {
-    fetch(`http://localhost:8000/auth/register`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/auth/register`, {
       method: "POST",
       body: formData,
       headers: { "Content-Type": "application/x-www-form-urlencoded" },

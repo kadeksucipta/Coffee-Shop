@@ -54,7 +54,7 @@ const Invoice = () => {
 
   const fetchProfile = (formData) => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/auth/me`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
       headers: {
@@ -70,7 +70,7 @@ const Invoice = () => {
 
   const fetchCart = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/carts`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ const Invoice = () => {
 
   const getInvoices = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/invoices/${state?.id}`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/invoices/${state?.id}`, {
       method: "GET", 
       headers: {
         Authorization: `Bearer ${token}`,

@@ -56,7 +56,7 @@ const Profile = () => {
   }, []);
 
   const fetchProduct = () => {
-    fetch(`http://localhost:8000/api/products`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/products`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.data);
@@ -66,7 +66,7 @@ const Profile = () => {
 
   const handleClick = (category) => {
     setSelect(category);
-    fetch(`http://localhost:8000/api/products?limit=50&category=${category}`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/products?limit=50&category=${category}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.data);
@@ -75,7 +75,7 @@ const Profile = () => {
   };
 
   const fetchTags = () => {
-    fetch(`http://localhost:8000/api/tags`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/tags`)
       .then((res) => res.json())
       .then((data) => {
         setTags(data);
@@ -84,7 +84,7 @@ const Profile = () => {
   };
 
   const handleTags = (tags) => {
-    fetch(`http://localhost:8000/api/products?limit=50&tags=${tags}`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/products?limit=50&tags=${tags}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.data);
@@ -94,7 +94,7 @@ const Profile = () => {
 
   const fetchProfile = (formData) => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/auth/me`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
       headers: { Authorization: `Bearer ${token}` },

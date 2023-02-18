@@ -33,7 +33,7 @@ const Home = () => {
   const cart = useSelector((state) => state.cart);
 
   const fetchProduct = () => {
-    fetch(`http://localhost:8000/api/products`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/products`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.data);
@@ -43,7 +43,7 @@ const Home = () => {
 
   const handleClick = (category) => {
     setSelect(category);
-    fetch(`http://localhost:8000/api/products?limit=50&category=${category}`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/products?limit=50&category=${category}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.data);
@@ -52,7 +52,7 @@ const Home = () => {
   };
 
   const fetchTags = () => {
-    fetch(`http://localhost:8000/api/tags`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/tags`)
       .then((res) => res.json())
       .then((data) => {
         setTags(data);
@@ -61,7 +61,7 @@ const Home = () => {
   };
 
   const handleTags = (tags) => {
-    fetch(`http://localhost:8000/api/products?limit=50&tags=${tags}`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/products?limit=50&tags=${tags}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.data);
@@ -85,7 +85,7 @@ const Home = () => {
       console.log("cart: ",cart);
       console.log("itemsss :", items);
 
-      fetch(`http://localhost:8000/api/carts`, {
+      fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
         method: "PUT",
         body: JSON.stringify({
           user: JSON.parse(userData),
@@ -117,7 +117,7 @@ const Home = () => {
 
   const fetchCart = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/carts`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

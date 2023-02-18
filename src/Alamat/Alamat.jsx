@@ -55,7 +55,7 @@ const Alamat = () => {
 
   const submitAddress = () => {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:8000/api/delivery-addresses`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

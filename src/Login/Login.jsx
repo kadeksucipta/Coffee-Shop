@@ -35,7 +35,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const fetchLogin = (formData) => {
-    fetch(`http://localhost:8000/auth/login`, {
+    fetch(`https://glamorous-sock-ox.cyclic.app/auth/login`, {
       method: "POST",
       body: formData,
       headers: { "Content-Type": "application/x-www-form-urlencoded" },

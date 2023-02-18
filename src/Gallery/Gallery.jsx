@@ -33,7 +33,7 @@ const Gallery= () => {
   const cart = useSelector((state) => state.cart);
 
   const fetchGallery = () => {
-    fetch(`http://localhost:8000/api/gallery`)
+    fetch(`https://glamorous-sock-ox.cyclic.app/api/gallery`)
       .then((res) => res.json())
       .then((data) => {
         setGallery(data.data);
