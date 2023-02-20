@@ -19,6 +19,7 @@ import otak from "./OTAK BUSINESS.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import { setCart } from "../App/features/Cart/Actions";
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const Checkout = () => {
     fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -72,7 +73,7 @@ const Checkout = () => {
       method: "GET",
       body: formData,
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
       },
     })
       .then((res) => res.json())
@@ -86,7 +87,7 @@ const Checkout = () => {
     const token = localStorage.getItem("token");
     fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
       },
     })
       .then((res) => res.json())
@@ -100,6 +101,7 @@ const Checkout = () => {
   const dispatch = useDispatch();
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
@@ -213,6 +215,7 @@ const Checkout = () => {
         </Card>
       </Container>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

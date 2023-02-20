@@ -34,7 +34,7 @@ const CartReducer = (state = initialState, { type, payload }) => {
       localStorage.setItem("cart", JSON.stringify(carts));
       return carts;
     case SET_CART:
-      const newPayload = payload?.map(item => ({
+      const newPayload = payload.map(item => ({
         ...item,
         qty: item.qty?item.qty:1
       }))

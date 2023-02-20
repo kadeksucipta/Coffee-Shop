@@ -8,6 +8,7 @@ import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../src/App/features/Login/Actions"
+import AnimatedPage from "../Component/AnimatedPage";
 import "./Login.css";
 import otak from "./OTAK BUSINESS.png";
 
@@ -75,6 +76,7 @@ const Login = () => {
   };
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <div className="bg-login">
       <Container
@@ -217,6 +219,7 @@ const Login = () => {
       </div>
       </div>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

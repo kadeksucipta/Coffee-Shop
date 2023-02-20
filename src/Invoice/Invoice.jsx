@@ -21,6 +21,7 @@ import {
 import { numberWithCommas } from "../Component/Utils";
 import otak from "./OTAK BUSINESS.png";
 import "./Invoice.css"
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Invoice = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const Invoice = () => {
       method: "GET",
       body: formData,
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
       },
     })
       .then((res) => res.json())
@@ -73,7 +74,7 @@ const Invoice = () => {
     fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -90,7 +91,7 @@ const Invoice = () => {
     fetch(`https://glamorous-sock-ox.cyclic.app/api/invoices/${state?.id}`, {
       method: "GET", 
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -103,6 +104,7 @@ const Invoice = () => {
   }
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
@@ -221,9 +223,8 @@ const Invoice = () => {
           </Card.Body>
         </Card>
       </Container>
-
-      
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

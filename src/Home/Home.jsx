@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { numberWithCommas } from "../Component/Utils";
 import swal from "sweetalert";
 import { setCart } from "../App/features/Cart/Actions";
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Home = () => {
   const goToProfile = () => {
@@ -93,7 +94,7 @@ const Home = () => {
         }),
 
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
           Accept: "application/json",
           "Content-Type": "application/json",
         },
@@ -119,7 +120,7 @@ const Home = () => {
     const token = localStorage.getItem("token");
     fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
       },
     })
       .then((res) => res.json())
@@ -131,6 +132,7 @@ const Home = () => {
   };
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <Navbar variant="light" className="nav-coffe" expand="lg">
         <Container>
@@ -233,7 +235,7 @@ const Home = () => {
               <Card.Img
                 style={{ borderRadius: "10px 10px 0px 0px" }}
                 variant="top"
-                src={"http://localhost:8000/images/" + item.image_url}
+                src={"http://localhost:8000/images/"+ item.image_url}
               />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
@@ -269,6 +271,7 @@ const Home = () => {
         </div>
       </Container>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

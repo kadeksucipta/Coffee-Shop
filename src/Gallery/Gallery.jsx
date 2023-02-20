@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { numberWithCommas } from "../Component/Utils";
 import { setCart } from "../App/features/Cart/Actions";
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Gallery= () => {
   const goToProfile = () => {
@@ -42,6 +43,7 @@ const Gallery= () => {
   };
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
@@ -139,6 +141,7 @@ const Gallery= () => {
         </div>
       </Container>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

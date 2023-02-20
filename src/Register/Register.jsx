@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../src/App/features/Login/Actions";
 import "./Register.css";
 import otak from "./OTAK BUSINESS.png";
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -78,6 +79,7 @@ const Register = () => {
   };
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <div className="bg-register">
         <Container
@@ -269,6 +271,7 @@ const Register = () => {
         </div>
       </div>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

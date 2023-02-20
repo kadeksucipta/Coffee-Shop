@@ -21,6 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import "./Cart.css";
 import { numberWithCommas } from "../Component/Utils";
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -71,7 +72,7 @@ const Cart = () => {
       }),
 
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -112,7 +113,7 @@ const Cart = () => {
       }),
 
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -131,7 +132,7 @@ const Cart = () => {
 
     fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
       },
     })
       .then((res) => res.json())
@@ -146,6 +147,7 @@ const Cart = () => {
   }
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
@@ -287,6 +289,7 @@ const Cart = () => {
         </Card>
       </Container>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

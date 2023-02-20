@@ -14,6 +14,7 @@ import {
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Landing = () => {
 
@@ -46,6 +47,7 @@ const Landing = () => {
   };
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <div className="box-bg">
       <Navbar variant="dark" className="nav-portal" expand="lg">
@@ -91,10 +93,10 @@ const Landing = () => {
         <div className="box-landing">
         <div className="box2-landing">
           <br />
+
           <h4 style={{ color: "black", fontSize: "20px", textAlign: "center" }}>
             <strong>Menu Utama</strong>
           </h4>
-          
           <div className="d-flex" style={{justifyContent: "center", alignItems: "center"}}>
           {landing.map((item, index) => (
             <Card className="card-landing" key={index} style={{width: "15rem", height: "15rem", borderRadius: "10px 10px 100px 100px", border: "none"}}>
@@ -142,6 +144,7 @@ const Landing = () => {
       </main>
       </div>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 

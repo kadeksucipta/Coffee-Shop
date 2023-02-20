@@ -9,6 +9,7 @@ import otak from "./OTAK BUSINESS.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import "./Confirm.css"
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Confirm = () => {
   const navigate = useNavigate()
@@ -51,7 +52,7 @@ const Confirm = () => {
       }),
 
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -69,7 +70,7 @@ const Confirm = () => {
     fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "GET",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
           Accept: "application/json",
           "Content-Type": "application/json",
         },
@@ -89,8 +90,8 @@ const Confirm = () => {
     const dispatch = useDispatch()
   
   return (
-    <React.Fragment>
-            
+    <AnimatedPage>
+    <React.Fragment> 
         <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
           <Navbar.Brand>
@@ -207,6 +208,7 @@ const Confirm = () => {
         </Card>
       </Container>
     </React.Fragment>
+    </AnimatedPage>
   );
 }
 

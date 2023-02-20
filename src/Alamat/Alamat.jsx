@@ -17,6 +17,7 @@ import { Badge, Col, Container, ListGroup, Navbar, NavDropdown, Row } from "reac
 import otak from "./OTAK BUSINESS.png";
 import Table from 'react-bootstrap/Table';
 import "./Alamat.css"
+import AnimatedPage from "../Component/AnimatedPage";
 
 const Alamat = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const Alamat = () => {
     fetch(`https://glamorous-sock-ox.cyclic.app/api/delivery-addresses`, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -71,6 +72,7 @@ const Alamat = () => {
   };
 
   return (
+    <AnimatedPage>
     <React.Fragment>
       <Navbar variant="light" className="nav-portal" expand="lg">
         <Container>
@@ -208,6 +210,7 @@ const Alamat = () => {
       </Card>
       </Container>
     </React.Fragment>
+    </AnimatedPage>
   );
 };
 
