@@ -235,7 +235,7 @@ const Home = () => {
               <Card.Img
                 style={{ borderRadius: "10px 10px 0px 0px" }}
                 variant="top"
-                src={"http://localhost:8000/images/"+ item.image_url}
+                src={"https://glamorous-sock-ox.cyclic.app/images/"+ item.image_url}
               />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>

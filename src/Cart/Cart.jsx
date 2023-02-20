@@ -257,7 +257,7 @@ const Cart = () => {
                           maxWidth: "100%"
                         }}
                         variant="top"
-                        src={"http://localhost:8000/images/" + item.image_url}
+                        src={"https://glamorous-sock-ox.cyclic.app/images/" + item.image_url}
                       />
                     </td>
                     <td>{item.name}</td>
