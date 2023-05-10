@@ -72,7 +72,7 @@ const Cart = () => {
       }),
 
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
+        Authorization: `Bearer ${token}`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -113,7 +113,7 @@ const Cart = () => {
       }),
 
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
+        Authorization: `Bearer ${token}`,
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -132,7 +132,7 @@ const Cart = () => {
 
     fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyMTQxZmRkOTQ4MTg3Y2FiOTdkYTkiLCJmdWxsX25hbWUiOiJrYWRlayBzdWNpcHRhIiwiZW1haWwiOiJrYWNpcDJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiY3VzdG9tZXJfaWQiOjE2LCJpYXQiOjE2NzY4MDkyNjd9.2s40qd3LHnkSPGxkgtdr4RB5dLshARd3PFm-FGPERg4`,
+        Authorization: `Bearer ${token}`,
       },
     })
       .then((res) => res.json())
