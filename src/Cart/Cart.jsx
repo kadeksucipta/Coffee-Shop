@@ -64,7 +64,7 @@ const Cart = () => {
     console.log("cart: ", cart);
     console.log("itemscart :", items);
 
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/carts`, {
       method: "PUT",
       body: JSON.stringify({
         user: JSON.parse(userData),
@@ -105,7 +105,7 @@ const Cart = () => {
     console.log("oldcart :", oldCart);
     console.log("cart: ", cart);
 
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/carts`, {
       method: "PUT",
       body: JSON.stringify({
         user: JSON.parse(userData),
@@ -130,7 +130,7 @@ const Cart = () => {
   const fetchCart = () => {
     const token = localStorage.getItem("token");
 
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/carts`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -148,147 +148,161 @@ const Cart = () => {
 
   return (
     <AnimatedPage>
-    <React.Fragment>
-      <Navbar variant="light" className="nav-portal" expand="lg">
-        <Container>
-          <Navbar.Brand>
-            <img
-              alt=""
-              src={otak}
-              width="50"
-              height="30"
-              className="d-inline-block align-top"
-            />
-            <strong>Otak</strong>Business
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <select
-                style={{
-                  borderRadius: "4px",
-                  background: "white",
-                  color: "black",
-                  border: "none",
-                }}
-                title="Category"
-                id="navbarScrollingDropdown"
-              >
-                <option
-                  style={{ background: "white", color: "black" }}
-                  value="Semua Menu"
-                >
-                  Semua Menu
-                </option>
-                <NavDropdown.Divider />
-                <option
-                  style={{ background: "white", color: "black" }}
-                  value="Minuman"
-                >
-                  Minuman
-                </option>
-                <NavDropdown.Divider />
-                <option
-                  style={{ background: "white", color: "black" }}
-                  value="Snack"
-                >
-                  Snack
-                </option>
-                <NavDropdown.Divider />
-              </select>
-            </Nav>
-            <Nav className="d-flex">
-              <Nav.Link
-                onClick={() => goToHome()}
-                style={{ color: "black" }}
-                active
-              >
-                Menu
-              </Nav.Link>
-              <Nav.Link style={{ color: "black" }}>
-                <FontAwesomeIcon icon={faCartShopping} />
-                <Badge pill bg="danger">
-                {cart.length}
-                </Badge>
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => goToProfile()}
-                style={{ color: "black" }}
-              >
-                <FontAwesomeIcon icon={faUserAlt} />
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/*---------------------------------------------------------*/}
-      <Container>
-        <Card className="mt-5">
-          <Card.Header style={{color: "white"}} className="header-cart">Keranjang Belanja</Card.Header>
-          <Card.Body>
-            <h5 onClick={() => dispatch(increment(1))}>
-              <strong>
-                Sub Total : Rp.{numberWithCommas(totalCartPrice)}.00
-              </strong>
-            </h5>
-            <Table responsive className="table-alamat" striped bordered hover>
-              <thead style={{ maxWidth: "100%" }}>
-                <tr style={{ maxWidth: "100%" }}>
-                  <th>Gambar</th>
-                  <th>Barang</th>
-                  <th>Harga</th>
-                  <th>Qty</th>
-                </tr>
-              </thead>
-              {cart.map((item, index) => (
-                <tbody key={index} style={{ maxWidth: "100%" }}>
-                  <tr style={{ maxWidth: "100%" }}>
-                    <td>
-                      <img
-                        style={{
-                          width: "150px",
-                          height: "100px",
-                          borderRadius: "5px",
-                          maxWidth: "100%"
-                        }}
-                        variant="top"
-                        src={"https://glamorous-sock-ox.cyclic.app/images/" + item.image_url}
-                      />
-                    </td>
-                    <td>{item.name}</td>
-                    <td>Rp. {numberWithCommas(item.price)}</td>
-                    <td>
-                      <button
-                        onClick={() => removeProduct(item.product)}
-                        className="minus"
-                      >
-                        <strong>-</strong>
-                      </button>
-                      {" "}<span>{item.qty}</span>{" "}
-               
-                      <button
-                        onClick={() => addtoCart(item.product)}
-                        className="plus"
-                      >
-                        <strong>+</strong>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              ))}
-            </Table>
-          </Card.Body>
+      <React.Fragment>
+        <Navbar variant="light" className="nav-portal" expand="lg">
           <Container>
-          <Button className="btn-gocheckout" style={{background: "white", border: "1px solid #a56e06", color: "#a56e06"}} onClick={() => goToCheckout()}>Check Out</Button>
+            <Navbar.Brand>
+              <img
+                alt=""
+                src={otak}
+                width="50"
+                height="30"
+                className="d-inline-block align-top"
+              />
+              <strong>Otak</strong>Business
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll">
+              <Nav
+                className="me-auto my-2 my-lg-0"
+                style={{ maxHeight: "100px" }}
+                navbarScroll
+              >
+                <select
+                  style={{
+                    borderRadius: "4px",
+                    background: "white",
+                    color: "black",
+                    border: "none",
+                  }}
+                  title="Category"
+                  id="navbarScrollingDropdown"
+                >
+                  <option
+                    style={{ background: "white", color: "black" }}
+                    value="Semua Menu"
+                  >
+                    Semua Menu
+                  </option>
+                  <NavDropdown.Divider />
+                  <option
+                    style={{ background: "white", color: "black" }}
+                    value="Minuman"
+                  >
+                    Minuman
+                  </option>
+                  <NavDropdown.Divider />
+                  <option
+                    style={{ background: "white", color: "black" }}
+                    value="Snack"
+                  >
+                    Snack
+                  </option>
+                  <NavDropdown.Divider />
+                </select>
+              </Nav>
+              <Nav className="d-flex">
+                <Nav.Link
+                  onClick={() => goToHome()}
+                  style={{ color: "black" }}
+                  active
+                >
+                  Menu
+                </Nav.Link>
+                <Nav.Link style={{ color: "black" }}>
+                  <FontAwesomeIcon icon={faCartShopping} />
+                  <Badge pill bg="danger">
+                    {cart.length}
+                  </Badge>
+                </Nav.Link>
+                <Nav.Link
+                  onClick={() => goToProfile()}
+                  style={{ color: "black" }}
+                >
+                  <FontAwesomeIcon icon={faUserAlt} />
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
           </Container>
-        </Card>
-      </Container>
-    </React.Fragment>
+        </Navbar>
+
+        {/*---------------------------------------------------------*/}
+        <Container>
+          <Card className="mt-5">
+            <Card.Header style={{ color: "white" }} className="header-cart">
+              Keranjang Belanja
+            </Card.Header>
+            <Card.Body>
+              <h5 onClick={() => dispatch(increment(1))}>
+                <strong>
+                  Sub Total : Rp.{numberWithCommas(totalCartPrice)}.00
+                </strong>
+              </h5>
+              <Table responsive className="table-alamat" striped bordered hover>
+                <thead style={{ maxWidth: "100%" }}>
+                  <tr style={{ maxWidth: "100%" }}>
+                    <th>Gambar</th>
+                    <th>Barang</th>
+                    <th>Harga</th>
+                    <th>Qty</th>
+                  </tr>
+                </thead>
+                {cart.map((item, index) => (
+                  <tbody key={index} style={{ maxWidth: "100%" }}>
+                    <tr style={{ maxWidth: "100%" }}>
+                      <td>
+                        <img
+                          style={{
+                            width: "150px",
+                            height: "100px",
+                            borderRadius: "5px",
+                            maxWidth: "100%",
+                          }}
+                          variant="top"
+                          src={
+                            "https://jungle-green-hermit-crab-fez.cyclic.app/images/" +
+                            item.image_url
+                          }
+                        />
+                      </td>
+                      <td>{item.name}</td>
+                      <td>Rp. {numberWithCommas(item.price)}</td>
+                      <td>
+                        <button
+                          onClick={() => removeProduct(item.product)}
+                          className="minus"
+                        >
+                          <strong>-</strong>
+                        </button>{" "}
+                        <span>{item.qty}</span>{" "}
+                        <button
+                          onClick={() => addtoCart(item.product)}
+                          className="plus"
+                        >
+                          <strong>+</strong>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                ))}
+              </Table>
+            </Card.Body>
+            <Container>
+              <Button
+                className="btn-gocheckout"
+                style={{
+                  background: "white",
+                  border: "1px solid #a56e06",
+                  color: "#a56e06",
+                }}
+                onClick={() => goToCheckout()}
+              >
+                Check Out
+              </Button>
+            </Container>
+          </Card>
+        </Container>
+      </React.Fragment>
     </AnimatedPage>
   );
 };

@@ -55,7 +55,7 @@ const Invoice = () => {
 
   const fetchProfile = (formData) => {
     const token = localStorage.getItem("token");
-    fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
       headers: {
@@ -71,7 +71,7 @@ const Invoice = () => {
 
   const fetchCart = () => {
     const token = localStorage.getItem("token");
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/carts`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/carts`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ const Invoice = () => {
 
   const getInvoices = () => {
     const token = localStorage.getItem("token");
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/invoices/${state?.id}`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/invoices/${state?.id}`, {
       method: "GET", 
       headers: {
         Authorization: `Bearer ${token}`,

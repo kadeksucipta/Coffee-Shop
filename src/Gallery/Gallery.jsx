@@ -1,7 +1,23 @@
-import { faCartFlatbed, faCartPlus, faCartShopping, faCocktail, faTag, faUser, faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartFlatbed,
+  faCartPlus,
+  faCartShopping,
+  faCocktail,
+  faTag,
+  faUser,
+  faUserAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import { Badge, Button, Card, Col, Container, Nav, Navbar } from "react-bootstrap";
+import {
+  Badge,
+  Button,
+  Card,
+  Col,
+  Container,
+  Nav,
+  Navbar,
+} from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import otak from "./OTAK BUSINESS.png";
 import "./Gallery.css";
@@ -11,13 +27,13 @@ import { numberWithCommas } from "../Component/Utils";
 import { setCart } from "../App/features/Cart/Actions";
 import AnimatedPage from "../Component/AnimatedPage";
 
-const Gallery= () => {
+const Gallery = () => {
   const goToProfile = () => {
     navigate("/Profile");
   };
   const goToCart = () => {
     navigate("/Cart");
-  }; 
+  };
   const goToLanding = () => {
     navigate("/");
   };
@@ -34,7 +50,7 @@ const Gallery= () => {
   const cart = useSelector((state) => state.cart);
 
   const fetchGallery = () => {
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/gallery`)
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/gallery`)
       .then((res) => res.json())
       .then((data) => {
         setGallery(data.data);
@@ -44,22 +60,25 @@ const Gallery= () => {
 
   return (
     <AnimatedPage>
-    <React.Fragment>
-      <Navbar variant="light" className="nav-portal" expand="lg">
-        <Container>
-          <Navbar.Brand style={{cursor: "pointer"}} onClick={() => goToLanding()}>
-            <img
-              alt=""
-              src={otak}
-              width="50"
-              height="30"
-              className="d-inline-block align-top"
-            />
-            <strong>Otak</strong>Business
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            {/* <Nav
+      <React.Fragment>
+        <Navbar variant="light" className="nav-portal" expand="lg">
+          <Container>
+            <Navbar.Brand
+              style={{ cursor: "pointer" }}
+              onClick={() => goToLanding()}
+            >
+              <img
+                alt=""
+                src={otak}
+                width="50"
+                height="30"
+                className="d-inline-block align-top"
+              />
+              <strong>Otak</strong>Business
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll">
+              {/* <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
               navbarScroll
@@ -98,8 +117,8 @@ const Gallery= () => {
                 <NavDropdown.Divider />
               </select>
             </Nav> */}
-            
-            {/* <Nav className="d-flex">
+
+              {/* <Nav className="d-flex">
               <Nav.Link  style={{ color: "black" }} active>
                 Menu
               </Nav.Link>
@@ -110,37 +129,40 @@ const Gallery= () => {
               <FontAwesomeIcon icon={faUserAlt} />
               </Nav.Link>
             </Nav> */}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
-      <Container>
-        <div style={{ marginTop: "30px" }}>
-          <h5>Selamat datang !</h5>
-          <h3>Gallery kami</h3>
-        </div>
-        <div className="box-gallery">
-          {gallery.map((item, index) => (
-            <Card
-              key={index}
-              className="card-gallery"
-              style={{
-                borderRadius: "10px 10px 80px 80px",
-              }}
-            >
-              <Card.Img
-                style={{ borderRadius: "10px 10px 0px 0px" }}
-                variant="top"
-                src={"https://glamorous-sock-ox.cyclic.app/images/" + item.image_url}
-              />
-              <Card.Body>
-                <Card.Title className="text-center">{item.name}</Card.Title>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      </Container>
-    </React.Fragment>
+        <Container>
+          <div style={{ marginTop: "30px" }}>
+            <h5>Selamat datang !</h5>
+            <h3>Gallery kami</h3>
+          </div>
+          <div className="box-gallery">
+            {gallery.map((item, index) => (
+              <Card
+                key={index}
+                className="card-gallery"
+                style={{
+                  borderRadius: "10px 10px 80px 80px",
+                }}
+              >
+                <Card.Img
+                  style={{ borderRadius: "10px 10px 0px 0px" }}
+                  variant="top"
+                  src={
+                    "https://glamorous-sock-ox.cyclic.app/images/" +
+                    item.image_url
+                  }
+                />
+                <Card.Body>
+                  <Card.Title className="text-center">{item.name}</Card.Title>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </React.Fragment>
     </AnimatedPage>
   );
 };

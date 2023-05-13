@@ -1,4 +1,8 @@
-import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
@@ -7,7 +11,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setUserData } from "../../src/App/features/Login/Actions"
+import { setUserData } from "../../src/App/features/Login/Actions";
 import AnimatedPage from "../Component/AnimatedPage";
 import "./Login.css";
 import otak from "./OTAK BUSINESS.png";
@@ -36,7 +40,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const fetchLogin = (formData) => {
-    fetch(`https://glamorous-sock-ox.cyclic.app/auth/login`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/auth/login`, {
       method: "POST",
       body: formData,
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -77,116 +81,124 @@ const Login = () => {
 
   return (
     <AnimatedPage>
-    <React.Fragment>
-      <div className="bg-login">
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          maxWidth: "100%",
-        }}
-      >
-        <div className="box-login">
-          <Form onSubmit={handleSubmit}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt=""
-                src={otak}
-                width="150px"
-                height="100px"
-                className="d-inline-block align-top"
-              />
-            </div>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <div>
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  placeholder="Enter email"
-                />
-              </div>
-              {error && email.length <= 0 ? (
-                <label style={{ color: "red" }} className="error-login">
-                  Email tidak boleh kosong !
-                </label>
-              ) : (
-                ""
-              )}
-              {error && email.length > 0 ? (
-                <label style={{ color: "red" }} className="error-login">
-                  Email belum terdaftar !
-                </label>
-              ) : (
-                ""
-              )}
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <div>
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  onChange={(e) => setPassword(e.target.value)}
-                  type="password"
-                  placeholder="Password"
-                />
-              </div>
-              {error && password.length <= 0 ? (
-                <label style={{ color: "red" }} className="error-login">
-                  Password tidak boleh kosong !
-                </label>
-              ) : (
-                ""
-              )}
-
-              {error && password.length > 0 ? (
-                <label style={{ color: "red" }} className="error-login">
-                  Password salah !
-                </label>
-              ) : (
-                ""
-              )}
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button
-              className="button-login"
-              onClick={() => handleSubmit()}
-              type="submit"
-            >
-              LogIn
-            </Button>
-            <div
-                style={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}
-                className="d-flex"
-              >
-                <span>Belum punya akun?</span>
-                <Nav.Link
-                  onClick={() => goToRegister()}
-                  style={{ display: "flex", color: "blue", marginLeft: "5px" }}
+      <React.Fragment>
+        <div className="bg-login">
+          <Container
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              maxWidth: "100%",
+            }}
+          >
+            <div className="box-login">
+              <Form onSubmit={handleSubmit}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
-                  Sign Up
-                </Nav.Link>
-              </div>
-          </Form>
-        </div>
-      </Container>
-      <div className="sosmed-login">
-      {/* <div className="icon-login">
+                  <img
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    alt=""
+                    src={otak}
+                    width="150px"
+                    height="100px"
+                    className="d-inline-block align-top"
+                  />
+                </div>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <div>
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                      onChange={(e) => setEmail(e.target.value)}
+                      type="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  {error && email.length <= 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Email tidak boleh kosong !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                  {error && email.length > 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Email belum terdaftar !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <div>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                      onChange={(e) => setPassword(e.target.value)}
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  {error && password.length <= 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Password tidak boleh kosong !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+
+                  {error && password.length > 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Password salah !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                  <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group>
+                <Button
+                  className="button-login"
+                  onClick={() => handleSubmit()}
+                  type="submit"
+                >
+                  LogIn
+                </Button>
+                <div
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginBottom: "20px",
+                  }}
+                  className="d-flex"
+                >
+                  <span>Belum punya akun?</span>
+                  <Nav.Link
+                    onClick={() => goToRegister()}
+                    style={{
+                      display: "flex",
+                      color: "blue",
+                      marginLeft: "5px",
+                    }}
+                  >
+                    Sign Up
+                  </Nav.Link>
+                </div>
+              </Form>
+            </div>
+          </Container>
+          <div className="sosmed-login">
+            {/* <div className="icon-login">
           <FontAwesomeIcon style={{ maxWidth: "100%", maxWidth: "100%", marginTop: "80px", marginRight: "5px" }} icon={faInstagram} />
           <span
             style={{ maxWidth: "100%", marginTop: "80px", fontSize: "18px", marginRight: "5px", fontWeight: "100" }}
@@ -216,9 +228,9 @@ const Login = () => {
             otakbusinesscf
           </span>
         </div> */}
-      </div>
-      </div>
-    </React.Fragment>
+          </div>
+        </div>
+      </React.Fragment>
     </AnimatedPage>
   );
 };

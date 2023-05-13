@@ -38,7 +38,7 @@ const Landing = () => {
   }, []);
 
   const fetchLanding = () => {
-    fetch(`https://glamorous-sock-ox.cyclic.app/api/landing`)
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/api/landing`)
       .then((res) => res.json())
       .then((data) => {
         setLanding(data.data);
@@ -100,7 +100,7 @@ const Landing = () => {
           <div className="d-flex" style={{justifyContent: "center", alignItems: "center"}}>
           {landing.map((item, index) => (
             <Card className="card-landing" key={index} style={{width: "15rem", height: "15rem", borderRadius: "10px 10px 100px 100px", border: "none"}}>
-              <Card.Img style={{borderRadius: "10px 10px 5px 5px"}} variant="top" src={"https://glamorous-sock-ox.cyclic.app/images/" + item.image_url} />
+              <Card.Img style={{borderRadius: "10px 10px 5px 5px"}} variant="top" src={"https://jungle-green-hermit-crab-fez.cyclic.app/images/" + item.image_url} />
               <Card.Body>
                 <Card.Title style={{textAlign: "center"}}>{item.name}</Card.Title>
                 <Card.Text></Card.Text>

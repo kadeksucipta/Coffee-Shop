@@ -37,7 +37,7 @@ const Register = () => {
   const [select, setSelect] = useState([]);
 
   const fetchLogin = (formData) => {
-    fetch(`https://glamorous-sock-ox.cyclic.app/auth/register`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/auth/register`, {
       method: "POST",
       body: formData,
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -80,165 +80,165 @@ const Register = () => {
 
   return (
     <AnimatedPage>
-    <React.Fragment>
-      <div className="bg-register">
-        <Container
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            maxWidth: "100%",
-          }}
-        >
-          <div className="box-register">
-            <Form onSubmit={handleSubmit}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
+      <React.Fragment>
+        <div className="bg-register">
+          <Container
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              maxWidth: "100%",
+            }}
+          >
+            <div className="box-register">
+              <Form onSubmit={handleSubmit}>
+                <div
                   style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                   }}
-                  alt=""
-                  src={otak}
-                  width="150px"
-                  height="100px"
-                  className="d-inline-block align-top"
-                />
-              </div>
-              <Form.Group className="mb-3">
-                <div>
-                  <Form.Label>Full Name</Form.Label>
-                  <Form.Control
-                    onChange={(e) => setName(e.target.value)}
-                    type="text"
-                    placeholder="Enter Name"
-                  />
-                </div>
-                {error && name.length <= 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Nama tidak boleh kosong !
-                  </label>
-                ) : (
-                  ""
-                )}
-                {error && email.length > 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Nama minimal 8 karakter !
-                  </label>
-                ) : (
-                  ""
-                )}
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <div>
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="email"
-                    placeholder="Enter email"
-                  />
-                </div>
-                {error && email.length <= 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Email tidak boleh kosong !
-                  </label>
-                ) : (
-                  ""
-                )}
-                {error && email.length > 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Email sudah terdaftar !
-                  </label>
-                ) : (
-                  ""
-                )}
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <div>
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    onChange={(e) => setPassword(e.target.value)}
-                    type="password"
-                    placeholder="Password"
-                  />
-                </div>
-                {error && password.length <= 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Password tidak boleh kosong !
-                  </label>
-                ) : (
-                  ""
-                )}
-
-                {error && password.length > 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Password salah !
-                  </label>
-                ) : (
-                  ""
-                )}
-              </Form.Group>
-
-              <Form.Group className="mb-3">
-                <Form.Label>
-                  <strong>Role</strong>
-                </Form.Label>
-                <div>
-                  <select
+                >
+                  <img
                     style={{
-                      width: "100%",
-                      height: "40px",
-                      borderRadius: "7px",
-                      paddingLeft: "10px",
-                      background: "none",
-                      cursor: "pointer",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                    className="role-input"
-                    name=""
-                    id="role"
-                    placeholder="select"
-                    onChange={(e) => setSelect(e.target.value)}
-                  >
-                    <option disabled hidden selected>
-                      select role
-                    </option>
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-                  </select>
+                    alt=""
+                    src={otak}
+                    width="150px"
+                    height="100px"
+                    className="d-inline-block align-top"
+                  />
                 </div>
-                {error && select.length <= 0 ? (
-                  <label style={{ color: "red" }} className="error-login">
-                    Pilih role Anda !
-                  </label>
-                ) : (
-                  ""
-                )}
-              </Form.Group>
+                <Form.Group className="mb-3">
+                  <div>
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control
+                      onChange={(e) => setName(e.target.value)}
+                      type="text"
+                      placeholder="Enter Name"
+                    />
+                  </div>
+                  {error && name.length <= 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Nama tidak boleh kosong !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                  {error && email.length > 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Nama minimal 8 karakter !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              <Button
-                className="button-register"
-                onClick={() => handleSubmit()}
-                type="submit"
-              >
-                SigIn
-              </Button>
-            </Form>
-          </div>
-        </Container>
-        <div className="sosmed-register">
-          {/* <div className="icon-login">
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <div>
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                      onChange={(e) => setEmail(e.target.value)}
+                      type="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  {error && email.length <= 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Email tidak boleh kosong !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                  {error && email.length > 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Email sudah terdaftar !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <div>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                      onChange={(e) => setPassword(e.target.value)}
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  {error && password.length <= 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Password tidak boleh kosong !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+
+                  {error && password.length > 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Password salah !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>
+                    <strong>Role</strong>
+                  </Form.Label>
+                  <div>
+                    <select
+                      style={{
+                        width: "100%",
+                        height: "40px",
+                        borderRadius: "7px",
+                        paddingLeft: "10px",
+                        background: "none",
+                        cursor: "pointer",
+                      }}
+                      className="role-input"
+                      name=""
+                      id="role"
+                      placeholder="select"
+                      onChange={(e) => setSelect(e.target.value)}
+                    >
+                      <option disabled hidden selected>
+                        select role
+                      </option>
+                      <option value="admin">Admin</option>
+                      <option value="user">User</option>
+                    </select>
+                  </div>
+                  {error && select.length <= 0 ? (
+                    <label style={{ color: "red" }} className="error-login">
+                      Pilih role Anda !
+                    </label>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                  <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group>
+                <Button
+                  className="button-register"
+                  onClick={() => handleSubmit()}
+                  type="submit"
+                >
+                  SigIn
+                </Button>
+              </Form>
+            </div>
+          </Container>
+          <div className="sosmed-register">
+            {/* <div className="icon-login">
           <FontAwesomeIcon style={{ maxWidth: "100%", maxWidth: "100%", marginTop: "80px", marginRight: "5px" }} icon={faInstagram} />
           <span
             style={{ maxWidth: "100%", marginTop: "80px", fontSize: "18px", marginRight: "5px", fontWeight: "100" }}
@@ -268,9 +268,9 @@ const Register = () => {
             otakbusinesscf
           </span>
         </div> */}
+          </div>
         </div>
-      </div>
-    </React.Fragment>
+      </React.Fragment>
     </AnimatedPage>
   );
 };

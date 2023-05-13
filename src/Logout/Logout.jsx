@@ -15,7 +15,7 @@ import Card from "react-bootstrap/Card";
 import Nav from "react-bootstrap/Nav";
 import { Badge, Container, Modal, Navbar, NavDropdown } from "react-bootstrap";
 import otak from "./OTAK BUSINESS.png";
-import "./Logout.css"
+import "./Logout.css";
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ const Logout = () => {
 
   const fetchProfile = (formData) => {
     const token = localStorage.getItem("token");
-    fetch(`https://glamorous-sock-ox.cyclic.app/auth/me`, {
+    fetch(`https://jungle-green-hermit-crab-fez.cyclic.app/auth/me`, {
       method: "GET",
       body: formData,
       headers: {
@@ -146,7 +146,11 @@ const Logout = () => {
         style={{ display: "block", position: "initial" }}
       >
         <Modal.Dialog>
-          <Modal.Header className="header-logout" onClick={() => goToProfile()} closeButton>
+          <Modal.Header
+            className="header-logout"
+            onClick={() => goToProfile()}
+            closeButton
+          >
             <Modal.Title>Logout</Modal.Title>
           </Modal.Header>
 
@@ -155,10 +159,7 @@ const Logout = () => {
           </Modal.Body>
 
           <Modal.Footer className="footer-logout">
-            <Button
-              className="btn-logout-tidak"
-              onClick={() => goToProfile()}
-            >
+            <Button className="btn-logout-tidak" onClick={() => goToProfile()}>
               Tidak
             </Button>
             <Button onClick={() => goToLogin()} className="btn-logout-ya">
